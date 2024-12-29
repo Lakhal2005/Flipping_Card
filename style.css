@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Poppins", sans-serif;
+color: #fff;
+}
+section{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #131220;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+
+}
+section::before{
+    content: "";
+    position:absolute;
+    width: 240px;
+    height: 240px;
+    background-color: #ac50bd;
+    border-radius: 50%;
+    transform: translate(200px,100px);
+    background: linear-gradient(90deg,#ac50bd,#f3f5f5);
+}
+section::after{
+    content: "";
+    position:absolute;
+    width: 240px;
+    height: 240px;
+    background-color: #ac50bd;
+    border-radius: 50%;
+    transform: translate(-200px,-100px);
+    background: linear-gradient(90deg,#ac50bd,#f3f5f5);
+}
+.container{
+    position: relative;
+    width: 450px;
+    height: 275px;
+    z-index: 100;
+    transform-style: preserve-3d;
+    transition: 0.6s;
+}
+.container .card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255,0.1);
+    box-shadow:0px 25px 45px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+    padding: 25px;
+    backface-visibility: hidden;
+}
+.container:hover{
+    transform: rotateY(180deg);
+}
+h5 {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 800;
+}
+.front-face .logo img,.front-face .chip img{
+    width: 48px;
+}
+.front-face .logo, .front-face header{
+    display: flex;
+    align-items: center;
+}
+.front-face header{
+    justify-content: space-between;
+}
+.front-face .detail-card{
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+/* .detail-card .title{
+    margin-top: 10px;
+    margin-bottom: 50px;
+} */
+.detail-card .valide-date{
+    margin-top: 60px;
+}
+h6{
+    font-size: 10px;
+    font-weight: 400;
+}
+h5.number{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+h5.name{
+    margin-top: 60px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.back-face{
+    transform: rotateY(180deg);
+}
+.back-face .border{
+    position: absolute;
+    height: 45px;
+    width: 100%;
+    background-color: #000;
+    top: 50px;
+    left: 0;
+    
+}
+.back-face .signature{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 80px;
+    height: 40px;
+    width: 85%;
+    background-color: #fff;
+    border-radius: 6px;
+    background: repeating-linear-gradient( #fff,
+    #fff 3px,
+    #efefef 0px,
+    #efefef 9px);
+}
+.back-face .signature i{
+    color: #000;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-right: -30px;
+    z-index: -1;
+}
+.card.back-face h5 {
+    font-size: 8px;
+    margin-top: 15px;
+}
+
+
